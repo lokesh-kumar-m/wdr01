@@ -1,1 +1,1 @@
-# wdr01 This repos aim is to get a recap on my Web Development skills and concepts. This is used to practise lot of concepts that I felt important. 
+# wdr01 - This repos aim is to get a recap on my Web Development skills and concepts. This is used to practise lot of concepts that I felt important. 
