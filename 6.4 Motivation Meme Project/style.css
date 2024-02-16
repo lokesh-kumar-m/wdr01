@@ -1,0 +1,27 @@
+*{
+    background-color: rgb(0, 0, 0);
+}
+.image{
+    width: 50%;
+    margin-left: 25%;
+}
+img{
+    width: 100%;
+    border: 2px solid rgb(255, 115, 0);
+}
+
+h1{
+    text-transform: uppercase;
+    color:white;
+    text-align: center;
+    font-weight: lighter;
+    letter-spacing: 5px;
+    font-size: 1.2rem;
+}
+h4{
+    color: aliceblue;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 1rem;
+}
+
