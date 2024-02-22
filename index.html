@@ -1,16 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rotating Wave Animation</title>
+<style>
+  .rotating-wave {
+    position: relative;
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    overflow: hidden;
+  }
+
+  .rotating-wave:before,
+  .rotating-wave:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: lightblue; /* Adjust color as needed */
+    border-radius: 50%;
+    animation: wave-animation 2s infinite linear;
+  }
+
+  .rotating-wave:before {
+    left: -50%;
+  }
+
+  .rotating-wave:after {
+    right: -50%;
+  }
+
+  @keyframes wave-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
 </head>
 <body>
-    <section>
-        <div>
-            <h1>Lokesh Mekala</h1>
-            <p>Aspiring Web Developer</p>
-        </div>
-    </section>
+<div class="rotating-wave"></div>
 </body>
 </html>
+
+<style>
+    .home__img-container {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        justify-self: center;
+        overflow: hidden;
+    }
+
+    .home__img-outer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: lightblue; /* Adjust color as needed */
+        animation: wave-animation 8s ease-in-out infinite;
+        border-radius: 50%;
+    }
+
+    .home__img-inner {
+        position: relative;
+        width: 90%; /* Adjust size as needed */
+        height: 90%; /* Adjust size as needed */
+        margin: 5%; /* Adjust margin to center */
+        background: url(../../assets/about.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 50%;
+    }
+
+    @keyframes wave-animation {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+    }
+</style>
+
+<div class="home__content grid"> 
+    <Social/>
+    <div class="home__img-container">
+        <div class="home__img-outer"></div>
+        <div class="home__img-inner"></div>
+    </div>
+    <Data/>
+</div>
+<Scroll/>
